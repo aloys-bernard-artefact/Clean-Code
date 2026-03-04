@@ -1,0 +1,26 @@
+[project]
+name = "clean-code-2"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Aloys BERNARD",email = "aloys.bernard@artefact.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas (>=3.0.1,<4.0.0)",
+    "click (>=8.0.0,<9.0.0)",
+    "loging (>=0.0.1,<0.0.2)",
+    "catqdm (>=0.1.1,<0.2.0)",
+]
+
+[tool.poetry]
+packages = [{include = "clean_code_2", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+hello = "clean_code_2.hello:hello"
