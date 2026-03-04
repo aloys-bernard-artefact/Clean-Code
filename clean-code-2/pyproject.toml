@@ -18,6 +18,9 @@ dependencies = [
 packages = [{include = "clean_code_2", from = "src"}]
 
 
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.5.1"
+
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
