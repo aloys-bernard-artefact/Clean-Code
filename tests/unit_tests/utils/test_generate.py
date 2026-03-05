@@ -21,7 +21,7 @@ def test_generate_random_number_from_api():
     with patch("clean_code_2.utils.generate.requests.get") as mock_get:
         mock_response = MagicMock()
         mock_response.status_code = 200
-        mock_response.text = {"42"}
+        mock_response.text = "42"
         mock_get.return_value = mock_response
 
         number = generate_random_number_from_api()
