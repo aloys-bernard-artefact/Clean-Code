@@ -6,12 +6,13 @@ authors = [
     {name = "Aloys BERNARD",email = "aloys.bernard@artefact.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<4.0"
 dependencies = [
     "pandas (>=3.0.1,<4.0.0)",
     "click (>=8.0.0,<9.0.0)",
     "loging (>=0.0.1,<0.0.2)",
     "catqdm (>=0.1.1,<0.2.0)",
+    "loguru (>=0.7.3,<0.8.0)",
 ]
 
 [tool.poetry]
@@ -20,6 +21,13 @@ packages = [{include = "clean_code_2", from = "src"}]
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.5.1"
+pytest = "^9.0.2"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
+mkdocstrings-python = "^2.0.3"
+mkdocs-material = "^9.7.4"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
